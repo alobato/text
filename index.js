@@ -21,9 +21,8 @@ export default styled('span')(
   props => props.medium && css`font-size: 24px;`,
   props => props.large && css`font-size: 30px;`,
   props => props.extralarge && css`font-size: 42px;`,
-  props => props.white && css`color: ${props => props.theme.colors.white};`,
-  props => props.primary && css`color: ${props => props.theme.colors.primary};`,
-  props => props.secondary && css`color: ${props => props.theme.colors.secondary};`,
-  props => props.color && (props.color.includes('grey') || props.color.includes('primary')) && css`color: ${props => props.theme.colors[props.color]};`,
+  props => props.white && css`color: ${props => (props.theme && props.theme.colors && props.theme.colors.white) ? props.theme.colors.white : 'white'};`,
+  props => props.primary && css`color: ${props => (props.theme && props.theme.colors && props.theme.colors.primary) ? props.theme.colors.primary : 'hsla(207, 73%, 57%, 1)'};`,
+  props => props.color && (props.color.includes('grey') || props.color.includes('primary')) && css`color: ${props => (props.theme && props.theme.colors && props.theme.colors[props.color]) ? props.theme.colors[props.color] : props.color};`,
   props => props.css
 )

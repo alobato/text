@@ -1,6 +1,6 @@
 {
   "name": "@alobato/text",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Text react component",
   "main": "index.js",
   "repository": "github:alobato/text",
